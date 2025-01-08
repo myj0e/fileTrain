@@ -27,6 +27,13 @@ void calculate_file_md5(int fd, unsigned char *result) {
     MD5_Final(result, &md5_ctx);
 }
 
+void calculate_buffer_md5(unsigned char *buffer, size_t length, unsigned char *result) {
+    MD5_CTX md5_ctx;
+    MD5_Init(&md5_ctx);
+    MD5_Update(&md5_ctx, buffer, length);
+    MD5_Final(result, &md5_ctx);
+}
+
 void print_md5(unsigned char *md5) {
     for (int i = 0; i < MD5_DIGEST_LENGTH; ++i) {
         printf("%02x", md5[i]);
