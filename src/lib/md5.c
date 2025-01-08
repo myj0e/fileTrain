@@ -8,7 +8,7 @@
 
 #define BUFFER_SIZE 4096
 
-void calculate_md5(int fd, unsigned char *result) {
+void calculate_file_md5(int fd, unsigned char *result) {
     MD5_CTX md5_ctx;
     MD5_Init(&md5_ctx);
 
