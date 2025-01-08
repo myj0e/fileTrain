@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "unistd.h": "c",
-        "stat.h": "c",
-        "stdio.h": "c",
-        "md5.h": "c"
-    }
-}
